@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="com.h2database scope changed to compile.">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="HotelManagement-1.2.1 started." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="HotelManagement-1.2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,6 +56,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/MARIA/Projects/IdeaProjects/HotelManagement/src/main/resources",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -136,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654296987307</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="HotelManagement-1.2 started.">
+      <created>1654367493238</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654367493238</updated>
+    </task>
+    <task id="LOCAL-00007" summary="HotelManagement-1.2.1 started.">
+      <created>1654367850665</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654367850665</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HotelManagement-1.1" />
+                        <option value="HotelManagement-1.2.1" />
                       </list>
                     </value>
                   </entry>
@@ -171,6 +181,8 @@
     <MESSAGE value="Dependencies added H2-Database and Hibernate." />
     <MESSAGE value="persistence.xml Added." />
     <MESSAGE value="com.h2database scope changed to compile." />
-    <option name="LAST_COMMIT_MESSAGE" value="com.h2database scope changed to compile." />
+    <MESSAGE value="HotelManagement-1.2 started." />
+    <MESSAGE value="HotelManagement-1.2.1 started." />
+    <option name="LAST_COMMIT_MESSAGE" value="HotelManagement-1.2.1 started." />
   </component>
 </project>
