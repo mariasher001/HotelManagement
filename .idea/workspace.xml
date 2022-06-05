@@ -4,114 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="java-fx controls and fxml dependencies added.">
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-console-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-console-l1-2-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-datetime-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-debug-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-errorhandling-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-file-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-file-l1-2-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-file-l2-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-handle-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-heap-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-interlocked-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-libraryloader-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-localization-l1-2-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-memory-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-namedpipe-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-processenvironment-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-processthreads-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-processthreads-l1-1-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-profile-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-string-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-synch-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-synch-l1-2-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-sysinfo-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-timezone-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-core-util-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-conio-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-convert-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-environment-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-filesystem-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-heap-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-locale-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-math-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-multibyte-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-private-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-process-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-runtime-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-stdio-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-string-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-time-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/api-ms-win-crt-utility-l1-1-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/decora_sse.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/fxplugins.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/glass.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/glib-lite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/gstreamer-lite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/javafx_font.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/javafx_iio.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/jfxmedia.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/jfxwebkit.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/msvcp140.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/prism_common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/prism_d3d.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/prism_sw.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/ucrtbase.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/vcruntime140.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/bin/vcruntime140_1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.base/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.base/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.base/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.controls/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.controls/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.controls/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.fxml/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.fxml/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.fxml/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.graphics/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.graphics/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.graphics/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.graphics/jpeg_fx.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.graphics/mesa3d.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/directshow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/glib.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/gstreamer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.media/libffi.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.swing/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.swing/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.swing/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/icu_web.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/libxml2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/libxslt.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/legal/javafx.web/webkit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx-swt.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.base.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.controls.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.fxml.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.graphics.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.media.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.swing.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/lib/javafx.web.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javafx-sdk-18.0.1/src.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/PrimaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/44db729a-161ba2ff31b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/44db729a-161ba2ff408.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/Mex-Carmen-Adults-Re-Su-Pa-Oc-Vi-SUST-JRSTEOV.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/hotelImagePrimary.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/images.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/leonardo-202912934-Hab_Grand_311_A_O-264201.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Primary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="com.h2database scope changed to compile.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/MARIA/Projects/IdeaProjects/HotelManagement",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/MARIA/Projects/IdeaProjects/HotelManagement&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MARIA\Projects\IdeaProjects\HotelManagement" />
@@ -196,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.marry.hotelmanagement.Main" />
         <item itemvalue="Application.com.marry.hotelmanagement.Main" />
       </list>
     </recent_temporary>
@@ -287,7 +181,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HotelManagement-1.2.1" />
+                        <option value="HotelManagement-1.2" />
                       </list>
                     </value>
                   </entry>

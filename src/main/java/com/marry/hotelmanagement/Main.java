@@ -52,6 +52,4 @@ public class Main extends Application {
     public static void startDatabase () throws SQLException {
         server.runTool("-tcp","-web","-ifNotExists");
     }
-
-
 }
