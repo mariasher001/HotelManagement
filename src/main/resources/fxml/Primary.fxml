@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marry.hotelmanagement.Controllers.PrimaryController">
+   <children>
+      <AnchorPane layoutX="49.0" layoutY="14.0" prefHeight="664.4" prefWidth="899.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView blendMode="MULTIPLY" fitHeight="650.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/hotelImagePrimary.jpg" />
+               </image>
+            </ImageView>
+            <Label blendMode="MULTIPLY" contentDisplay="CENTER" layoutX="19.0" layoutY="167.0" text="Welcome to Pearl Continental " textFill="#b21e94" textOverrun="CLIP">
+               <font>
+                  <Font name="Lucida Calligraphy Italic" size="50.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" blendMode="HARD_LIGHT" layoutX="260.0" layoutY="245.0" text="Your Dream Destination." textFill="#612255">
+               <font>
+                  <Font name="Lucida Calligraphy Italic" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Button layoutX="353.0" layoutY="295.0" mnemonicParsing="false" onAction="#startButtonClicked" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #986ca8; -fx-background-radius: 20;" text="Start" textFill="#970a74">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
