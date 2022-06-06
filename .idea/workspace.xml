@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="Version Changed from 1.2 to 1.2.2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/2197_ho_00_p_1024x768.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/Four Seasons Guangzhou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/The Empire Hotel, WorldHotels Collection.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/toppng.com-brown-background-texture-2048x1536.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/LoginAndRegister.fxml" afterDir="false" />
+    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="LoginAndRegister.fxml Created.&#10;Transition effects Added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/LoginAndRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/LoginAndRegister.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/MARIA/Projects/IdeaProjects/HotelManagement&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/MARIA/Projects/IdeaProjects/HotelManagement/src/main/resources/fxml/Login.fxml",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "two.files.diff.last.used.file": "C:/MARIA/Projects/IdeaProjects/HotelManagement/src/main/resources/fxml/Login.fxml"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MARIA\Projects\IdeaProjects\HotelManagement" />
@@ -119,7 +113,7 @@
       <workItem from="1654359292072" duration="2627000" />
       <workItem from="1654523348569" duration="94000" />
       <workItem from="1654524209627" duration="5738000" />
-      <workItem from="1654539998354" duration="2987000" />
+      <workItem from="1654539998354" duration="5683000" />
     </task>
     <task id="LOCAL-00001" summary="Project Initiated.">
       <created>1654290626501</created>
@@ -184,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654461223632</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="LoginAndRegister.fxml Created.&#10;Transition effects Added.">
+      <created>1654544149082</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654544149082</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +225,7 @@
     <MESSAGE value="HotelManagement-1.2.1 started." />
     <MESSAGE value="java-fx controls and fxml dependencies added." />
     <MESSAGE value="Version Changed from 1.2 to 1.2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Changed from 1.2 to 1.2.2" />
+    <MESSAGE value="LoginAndRegister.fxml Created.&#10;Transition effects Added." />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginAndRegister.fxml Created.&#10;Transition effects Added." />
   </component>
 </project>

@@ -28,11 +28,11 @@
                   <Font name="Blackadder ITC" size="48.0" />
                </font>
             </Label>
-            <TextField fx:id="loginUserName" layoutX="126.0" layoutY="124.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter User-Name" style="-fx-background-color: #edca98;">
+            <TextField fx:id="loginUserNameTextField" layoutX="126.0" layoutY="124.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter User-Name" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font></TextField>
-            <PasswordField fx:id="loginEmail" layoutX="126.0" layoutY="175.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter Password" style="-fx-background-color: #edca98;">
+            <PasswordField fx:id="loginPasswordPasswordField" layoutX="126.0" layoutY="175.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter Password" style="-fx-background-color: #edca98;">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font></PasswordField>
@@ -66,12 +66,12 @@
                   <Font name="Blackadder ITC" size="48.0" />
                </font>
             </Label>
-            <TextField layoutX="123.0" layoutY="127.0" prefHeight="26.0" prefWidth="284.0" promptText="User-Name" style="-fx-background-color: #edca98;">
+            <TextField fx:id="registerUsernameTextField" layoutX="123.0" layoutY="127.0" opacity="0.92" prefHeight="26.0" prefWidth="284.0" promptText="User-Name" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <PasswordField layoutX="123.0" layoutY="168.0" prefHeight="26.0" prefWidth="284.0" promptText="xyz@gmail.com" style="-fx-background-color: #edca98;">
+            <PasswordField fx:id="registerEmailTextField" layoutX="123.0" layoutY="168.0" prefHeight="26.0" prefWidth="284.0" promptText="xyz@gmail.com" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -81,8 +81,8 @@
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Button>
-            <PasswordField layoutX="123.0" layoutY="209.0" prefHeight="26.0" prefWidth="284.0" promptText="Password" style="-fx-background-color: #edca98;" />
-            <PasswordField layoutX="123.0" layoutY="247.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter the Admin Key" style="-fx-background-color: #edca98;" />
+            <PasswordField fx:id="registerPasswordTextField" layoutX="123.0" layoutY="209.0" prefHeight="26.0" prefWidth="284.0" promptText="Password" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
+            <PasswordField fx:id="registerKeyTextField" layoutX="123.0" layoutY="247.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter the Admin Key" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
             <Label layoutX="33.0" layoutY="127.0" text="User-Name " textFill="#dde010">
                <font>
                   <Font size="16.0" />

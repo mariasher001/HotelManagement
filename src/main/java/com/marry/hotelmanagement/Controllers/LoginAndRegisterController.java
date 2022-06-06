@@ -2,26 +2,44 @@ package com.marry.hotelmanagement.Controllers;
 
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
 public class LoginAndRegisterController {
 
-    private FadeTransition fadeTransition;
+    public TextField loginUserNameTextField;
+    public PasswordField loginPasswordPasswordField;
+    public TextField registerUsernameTextField;
+    public PasswordField registerEmailTextField;
+    public PasswordField registerPasswordTextField;
+    public PasswordField registerKeyTextField;
     public AnchorPane LoginAnchorPane;
     public AnchorPane RegisterAnchorPane;
 
     public void LoginButtonClicked(ActionEvent actionEvent) {
+        resetFields();
         //Main.setScene("");
     }
 
     public void RegisterButtonClicked(ActionEvent actionEvent) {
+        resetFields();
         setVisibility(RegisterAnchorPane,true,false);
         setVisibility(LoginAnchorPane,false,true);
         transition(LoginAnchorPane);
     }
 
+    public void resetFields(){
+        loginUserNameTextField.setText("");
+        loginPasswordPasswordField.setText("");
+        registerUsernameTextField.setText("");
+        registerPasswordTextField.setText("");
+        registerEmailTextField.setText("");
+        registerKeyTextField.setText("");
+
+    }
     public void OpenRegisterPage(MouseEvent mouseEvent) {
         setVisibility(LoginAnchorPane,true,false);
         setVisibility(RegisterAnchorPane,false,true);
