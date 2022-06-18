@@ -6,12 +6,13 @@
   <persistence-unit name="HotelManagement">
     <description>Hotel Management Hibernate Entity-Manager</description>
     <!--Add persistent classes-->
+    <class>com.marry.hotelmanagement.Models.UserData</class>
 
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
-
     <properties>
+      <!--Hibernate Always uses LocalHost:8082-->
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:../HotelManagement/HotelManagement_DB"/>
       <property name="javax.persistence.jdbc.user" value="msher"/>
