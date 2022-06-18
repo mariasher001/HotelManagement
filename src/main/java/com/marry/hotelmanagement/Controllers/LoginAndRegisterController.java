@@ -13,9 +13,9 @@ public class LoginAndRegisterController {
     public TextField loginUserNameTextField;
     public PasswordField loginPasswordPasswordField;
     public TextField registerUsernameTextField;
-    public PasswordField registerEmailTextField;
+    public TextField registerEmailTextField;
     public PasswordField registerPasswordTextField;
-    public PasswordField registerKeyTextField;
+    public TextField registerKeyTextField;
     public AnchorPane LoginAnchorPane;
     public AnchorPane RegisterAnchorPane;
 
