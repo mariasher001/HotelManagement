@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="resetFields Added to LoginAndRegister.fxml.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/LoginAndRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/LoginAndRegister.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="PasswordField changed to TextField for email and key in LoginAndRegister.fxml and LoginAndRegisterController.java." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +111,7 @@
       <workItem from="1654524209627" duration="5738000" />
       <workItem from="1654539998354" duration="7256000" />
       <workItem from="1655498096364" duration="1242000" />
-      <workItem from="1655560389304" duration="378000" />
+      <workItem from="1655560389304" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="Project Initiated.">
       <created>1654290626501</created>
@@ -194,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654546792810</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="PasswordField changed to TextField for email and key in LoginAndRegister.fxml and LoginAndRegisterController.java.">
+      <created>1655560857745</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655560857745</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +239,7 @@
     <MESSAGE value="Version Changed from 1.2 to 1.2.2" />
     <MESSAGE value="LoginAndRegister.fxml Created.&#10;Transition effects Added." />
     <MESSAGE value="resetFields Added to LoginAndRegister.fxml." />
-    <option name="LAST_COMMIT_MESSAGE" value="resetFields Added to LoginAndRegister.fxml." />
+    <MESSAGE value="PasswordField changed to TextField for email and key in LoginAndRegister.fxml and LoginAndRegisterController.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="PasswordField changed to TextField for email and key in LoginAndRegister.fxml and LoginAndRegisterController.java." />
   </component>
 </project>
