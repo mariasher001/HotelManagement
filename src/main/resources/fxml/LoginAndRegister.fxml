@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marry.hotelmanagement.Controllers.LoginAndRegisterController">
+   <children>
+      <ImageView fitHeight="660.0" fitWidth="919.0" layoutX="-61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/2197_ho_00_p_1024x768.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="LoginAnchorPane" layoutX="153.0" layoutY="132.0" prefHeight="404.0" prefWidth="536.0">
+         <children>
+            <ImageView fitHeight="404.0" fitWidth="536.0" layoutX="-14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/toppng.com-brown-background-texture-2048x1536.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="174.0" layoutY="14.0" text="Login Page" textFill="#dde010">
+               <font>
+                  <Font name="Blackadder ITC" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginUserNameTextField" layoutX="126.0" layoutY="124.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter User-Name" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></TextField>
+            <PasswordField fx:id="loginPasswordPasswordField" layoutX="126.0" layoutY="175.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter Password" style="-fx-background-color: #edca98;">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></PasswordField>
+            <Button layoutX="202.0" layoutY="270.0" mnemonicParsing="false" onAction="#LoginButtonClicked" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #502607; -fx-border-color: #e1ed04;" text="Login" textFill="#e1ed04">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="152.0" layoutY="239.0" onMouseClicked="#OpenRegisterPage" text="Dont have an Account?? Register here." textFill="#e1ed04" />
+            <Label layoutX="30.0" layoutY="124.0" text="User-Name " textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="175.0" text="Password" textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="RegisterAnchorPane" disable="true" layoutX="153.0" layoutY="132.0" opacity="0.0" prefHeight="404.0" prefWidth="536.0" visible="false">
+         <children>
+            <ImageView fitHeight="404.0" fitWidth="536.0" layoutX="-14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/toppng.com-brown-background-texture-2048x1536.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="14.0" text="Register Page" textFill="#dde010">
+               <font>
+                  <Font name="Blackadder ITC" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="registerUsernameTextField" layoutX="123.0" layoutY="127.0" opacity="0.92" prefHeight="26.0" prefWidth="284.0" promptText="User-Name" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="registerEmailTextField" layoutX="123.0" layoutY="168.0" prefHeight="26.0" prefWidth="284.0" promptText="xyz@gmail.com" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="202.0" layoutY="303.0" mnemonicParsing="false" onAction="#RegisterButtonClicked" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #502607; -fx-border-color: #e1ed04;" text="Register" textFill="#e1ed04">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="registerPasswordTextField" layoutX="123.0" layoutY="209.0" prefHeight="26.0" prefWidth="284.0" promptText="Password" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
+            <TextField fx:id="registerKeyTextField" layoutX="123.0" layoutY="247.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter the Admin Key" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
+            <Label layoutX="33.0" layoutY="127.0" text="User-Name " textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="168.0" text="Email" textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="209.0" text="Password" textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="247.0" text="Key" textFill="#dde010">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

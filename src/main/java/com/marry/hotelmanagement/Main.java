@@ -15,6 +15,7 @@ public class Main extends Application {
 
     //Initializing the H2-Server to start the database.
     private static final Server server = new Server();
+    private static Scene scene;
 
     public static void main(String[] args) throws SQLException {
         startDatabase();
@@ -24,16 +25,25 @@ public class Main extends Application {
 
     }
 
+    /**
+     * Description: Changes the Root of Scenes.
+     * @param fxml
+     * @throws IOException
+     */
+    public static void setScene(String fxml) throws IOException {
+        scene.setRoot(loadFxml(fxml));
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = new Scene(loadFxml("/fxml/Primary.fxml"));
+        scene = new Scene(loadFxml("Primary.fxml"));
         stage.setTitle("HotelManagement");
         stage.setScene(scene);
         stage.show();
     }
 
-    private Parent loadFxml(String fxml) throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
+    private static Parent loadFxml(String fxml) throws IOException {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/fxml/" + fxml));
         return loader.load();
     }
 
@@ -52,6 +62,4 @@ public class Main extends Application {
     public static void startDatabase () throws SQLException {
         server.runTool("-tcp","-web","-ifNotExists");
     }
-
-
 }
