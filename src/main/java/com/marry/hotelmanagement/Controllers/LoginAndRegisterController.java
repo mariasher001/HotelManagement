@@ -1,6 +1,7 @@
 package com.marry.hotelmanagement.Controllers;
 
 import com.marry.hotelmanagement.Exceptions.*;
+import com.marry.hotelmanagement.Main;
 import com.marry.hotelmanagement.Models.UserData;
 import com.marry.hotelmanagement.Models.UserDataManager;
 import javafx.animation.FadeTransition;
@@ -14,6 +15,7 @@ import javafx.util.Duration;
 
 import java.util.List;
 
+
 public class LoginAndRegisterController {
 
     public TextField loginUserNameTextField;
@@ -26,13 +28,12 @@ public class LoginAndRegisterController {
     public AnchorPane RegisterAnchorPane;
 
     private UserDataManager userDataManager;
-
+    public Main main= new Main();
     private Alert errorAlert = new Alert(Alert.AlertType.ERROR);
     private Alert confirmationAlert = new Alert((Alert.AlertType.CONFIRMATION));
 
     public void LoginButtonClicked(ActionEvent actionEvent) {
         resetFields();
-        //Main.setScene("");
     }
 
     public void RegisterButtonClicked(ActionEvent actionEvent) {
@@ -152,5 +153,12 @@ public class LoginAndRegisterController {
         transition.setFromValue(0.0);
         transition.setToValue(1.0);
         transition.play();
+    }
+
+    public void backButtonClicked(MouseEvent mouseEvent) {
+        resetFields();
+        setVisibility(RegisterAnchorPane, true, false);
+        setVisibility(LoginAnchorPane, false, true);
+        transition(LoginAnchorPane);
     }
 }

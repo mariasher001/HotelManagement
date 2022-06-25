@@ -54,7 +54,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="RegisterAnchorPane" disable="true" layoutX="153.0" layoutY="132.0" opacity="0.0" prefHeight="404.0" prefWidth="536.0" visible="false">
+      <AnchorPane fx:id="RegisterAnchorPane" disable="true" layoutX="153.0" layoutY="132.0" prefHeight="404.0" prefWidth="536.0" visible="false">
          <children>
             <ImageView fitHeight="404.0" fitWidth="536.0" layoutX="-14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -103,6 +103,11 @@
                   <Font size="16.0" />
                </font>
             </Label>
+            <ImageView fx:id="backButton" fitHeight="80.0" fitWidth="111.0" layoutX="-8.0" layoutY="14.0" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/back-button.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
