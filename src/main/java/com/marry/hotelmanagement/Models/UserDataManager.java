@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class UserDataManager implements AutoCloseable {
+public class UserDataManager implements UserDataDAO {
     private final EntityManagerFactory entityManagerFactory ;
     private final EntityManager entityManager;
 

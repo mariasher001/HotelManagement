@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="Added UserData Table.&#10;UserDataManager created.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Exceptions/CredentialsNotValidException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Exceptions/DoesNotMatchMinimumPasswordLengthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Exceptions/EmptyFieldsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Exceptions/KeyMismatchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Exceptions/UserDataAlreadyExistException.java" afterDir="false" />
+    <list default="true" id="2d0b1c96-500d-4ecb-b52b-17843d2a23ed" name="Changes" comment="Version changed from 1.2.3 to 1.2.4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HotelManagement_DB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/HotelManagement_DB.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marry/hotelmanagement/Controllers/LoginAndRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +99,7 @@
         <item itemvalue="Application.com.marry.hotelmanagement.Main" />
         <item itemvalue="Application.com.marry.hotelmanagement.Main" />
         <item itemvalue="Application.com.marry.hotelmanagement.Main" />
+        <item itemvalue="Application.com.marry.hotelmanagement.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +120,7 @@
       <workItem from="1654524209627" duration="5738000" />
       <workItem from="1654539998354" duration="7256000" />
       <workItem from="1655498096364" duration="1242000" />
-      <workItem from="1655560389304" duration="12364000" />
+      <workItem from="1655560389304" duration="14544000" />
     </task>
     <task id="LOCAL-00001" summary="Project Initiated.">
       <created>1654290626501</created>
@@ -227,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655564514445</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="User-Registration enabled in Database.&#10;Registration Validation implemented.">
+      <created>1655594251504</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1655594251504</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Version changed from 1.2.3 to 1.2.4">
+      <created>1655594473484</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655594473484</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +251,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HotelManagement-1.2.3" />
+                        <option value="HotelManagement-1.2.4" />
                       </list>
                     </value>
                   </entry>
@@ -272,6 +279,8 @@
     <MESSAGE value="PasswordField changed to TextField for email and key in LoginAndRegister.fxml and LoginAndRegisterController.java." />
     <MESSAGE value="Version changed from 1.2.2 to 1.2.3" />
     <MESSAGE value="Added UserData Table.&#10;UserDataManager created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UserData Table.&#10;UserDataManager created." />
+    <MESSAGE value="User-Registration enabled in Database.&#10;Registration Validation implemented." />
+    <MESSAGE value="Version changed from 1.2.3 to 1.2.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version changed from 1.2.3 to 1.2.4" />
   </component>
 </project>
