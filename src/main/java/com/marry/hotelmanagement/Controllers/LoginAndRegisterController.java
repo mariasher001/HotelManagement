@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -26,14 +27,35 @@ public class LoginAndRegisterController {
     public TextField registerKeyTextField;
     public AnchorPane LoginAnchorPane;
     public AnchorPane RegisterAnchorPane;
-
     private UserDataManager userDataManager;
-    public Main main= new Main();
     private Alert errorAlert = new Alert(Alert.AlertType.ERROR);
     private Alert confirmationAlert = new Alert((Alert.AlertType.CONFIRMATION));
 
     public void LoginButtonClicked(ActionEvent actionEvent) {
-        resetFields();
+        try {
+            UserDataAuthentication();
+            Main.setScene("HotelManagementMenu.fxml");
+        } catch (UserDataAuthenticationFailedException e) {
+            errorAlert.setTitle("UserDataAuthenticationFailedException");
+            errorAlert.setHeaderText("UserDataAuthentication Exception Caught!!");
+            errorAlert.setContentText("Login Username Or Password Don't match! Try Again");
+            errorAlert.showAndWait();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private void UserDataAuthentication() throws UserDataAuthenticationFailedException {
+        userDataManager = new UserDataManager();
+        List<UserData> userDataList = userDataManager.readAllUserData();
+        for (UserData userData : userDataList) {
+            if (loginUserNameTextField.getText().equals(userData.getUsername()) && loginPasswordPasswordField.getText().equals(userData.getPassword())) {
+                return;
+            }
+        }
+        throw new UserDataAuthenticationFailedException();
     }
 
     public void RegisterButtonClicked(ActionEvent actionEvent) {
@@ -67,20 +89,18 @@ public class LoginAndRegisterController {
             errorAlert.setHeaderText("UserDataAlreadyExistException Caught!!");
             errorAlert.setContentText("UserData Already Exist!!! Please Try again!");
             errorAlert.showAndWait();
-        } catch (DoesNotMatchMinimumPasswordLengthException e){
+        } catch (DoesNotMatchMinimumPasswordLengthException e) {
             errorAlert.setTitle("MinimumPasswordLengthException");
             errorAlert.setHeaderText("Minimum Password Length Exception caught!!");
             errorAlert.setContentText("Password Length should be greater than 6. Please Try again!");
             errorAlert.showAndWait();
-        }
-        catch(KeyMismatchException e){
+        } catch (KeyMismatchException e) {
             errorAlert.setTitle("KeyMismatchException");
             errorAlert.setHeaderText("KeyMismatchException caught!!");
             errorAlert.setContentText("Keys do not match. Please Try again :(");
             errorAlert.showAndWait();
-        }
-        catch (Exception e) {
-                throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
     }
@@ -104,11 +124,11 @@ public class LoginAndRegisterController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        if(registerPasswordTextField.getText().length() < 6){
+        if (registerPasswordTextField.getText().length() < 6) {
             throw new DoesNotMatchMinimumPasswordLengthException();
         }
 
-        if(!registerKeyTextField.getText().equals("KeyLOL")){
+        if (!registerKeyTextField.getText().equals("KeyLOL")) {
             throw new KeyMismatchException();
         }
 
