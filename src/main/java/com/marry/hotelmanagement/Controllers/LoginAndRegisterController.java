@@ -34,13 +34,11 @@ public class LoginAndRegisterController {
         try {
             UserDataAuthentication();
             Main.setScene("HotelManagementMenu.fxml");
-        }
-        catch (EmptyFieldsException e) {
+        } catch (EmptyFieldsException e) {
             e.errorAlertForEmptyField();
-        }
-        catch (UserDataAuthenticationFailedException e) {
+        } catch (UserDataAuthenticationFailedException e) {
             e.errorAlertForUserDataMismatch();
-        }  catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
@@ -73,7 +71,7 @@ public class LoginAndRegisterController {
             userDataManager.setUserData(userData);
             userDataManager.close();
 
-            AllAlerts.confirmAlert("Registration","Registration Successful", "The User is registered Successfully");
+            AllAlerts.confirmAlert("Registration", "Registration Successful", "The User is registered Successfully");
             resetFields();
             setVisibility(RegisterAnchorPane, true, false);
             setVisibility(LoginAnchorPane, false, true);
