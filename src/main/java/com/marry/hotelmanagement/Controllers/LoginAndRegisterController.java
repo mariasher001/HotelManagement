@@ -41,13 +41,23 @@ public class LoginAndRegisterController {
             errorAlert.setContentText("Login Username Or Password Don't match! Try Again");
             errorAlert.showAndWait();
 
+        } catch (EmptyFieldsException e) {
+            errorAlert.setTitle("EmptyFieldException");
+            errorAlert.setHeaderText("Empty Field Exception Caught!!");
+            errorAlert.setContentText("Fields cannot be left Empty!!!");
+            errorAlert.showAndWait();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
     }
 
-    private void UserDataAuthentication() throws UserDataAuthenticationFailedException {
+    private void UserDataAuthentication() throws UserDataAuthenticationFailedException, EmptyFieldsException {
+
+        if (loginUserNameTextField.getText().isEmpty() || loginPasswordPasswordField.getText().isEmpty()) {
+            throw new EmptyFieldsException();
+        }
+
         userDataManager = new UserDataManager();
         List<UserData> userDataList = userDataManager.readAllUserData();
         for (UserData userData : userDataList) {
