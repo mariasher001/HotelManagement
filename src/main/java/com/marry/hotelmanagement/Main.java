@@ -27,6 +27,7 @@ public class Main extends Application {
 
     /**
      * Description: Changes the Root of Scenes.
+     *
      * @param fxml
      * @throws IOException
      */
@@ -57,9 +58,10 @@ public class Main extends Application {
 
     /**
      * Description: Starting the H2-Database.
+     *
      * @throws SQLException: Database Exception
      */
-    public static void startDatabase () throws SQLException {
-        server.runTool("-tcp","-web","-ifNotExists");
+    public static void startDatabase() throws SQLException {
+        server.runTool("-tcp", "-web", "-ifNotExists");
     }
 }

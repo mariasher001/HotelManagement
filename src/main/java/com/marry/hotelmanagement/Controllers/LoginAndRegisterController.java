@@ -1,6 +1,7 @@
 package com.marry.hotelmanagement.Controllers;
 
 import com.marry.hotelmanagement.Exceptions.*;
+import com.marry.hotelmanagement.Main;
 import com.marry.hotelmanagement.Models.UserData;
 import com.marry.hotelmanagement.Models.UserDataManager;
 import javafx.animation.FadeTransition;
@@ -12,7 +13,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.List;
+
 
 public class LoginAndRegisterController {
 
@@ -24,15 +27,37 @@ public class LoginAndRegisterController {
     public TextField registerKeyTextField;
     public AnchorPane LoginAnchorPane;
     public AnchorPane RegisterAnchorPane;
-
     private UserDataManager userDataManager;
-
-    private Alert errorAlert = new Alert(Alert.AlertType.ERROR);
     private Alert confirmationAlert = new Alert((Alert.AlertType.CONFIRMATION));
 
     public void LoginButtonClicked(ActionEvent actionEvent) {
-        resetFields();
-        //Main.setScene("");
+        try {
+            UserDataAuthentication();
+            Main.setScene("HotelManagementMenu.fxml");
+        } catch (EmptyFieldsException e) {
+            e.errorAlertForEmptyField();
+        } catch (UserDataAuthenticationFailedException e) {
+            e.errorAlertForUserDataMismatch();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private void UserDataAuthentication() throws UserDataAuthenticationFailedException, EmptyFieldsException {
+
+        if (loginUserNameTextField.getText().isEmpty() || loginPasswordPasswordField.getText().isEmpty()) {
+            throw new EmptyFieldsException();
+        }
+
+        userDataManager = new UserDataManager();
+        List<UserData> userDataList = userDataManager.readAllUserData();
+        for (UserData userData : userDataList) {
+            if (loginUserNameTextField.getText().equals(userData.getUsername()) && loginPasswordPasswordField.getText().equals(userData.getPassword())) {
+                return;
+            }
+        }
+        throw new UserDataAuthenticationFailedException();
     }
 
     public void RegisterButtonClicked(ActionEvent actionEvent) {
@@ -46,40 +71,22 @@ public class LoginAndRegisterController {
             userDataManager.setUserData(userData);
             userDataManager.close();
 
-            confirmationAlert.setTitle("Registration");
-            confirmationAlert.setHeaderText("Registration Successful");
-            confirmationAlert.setContentText("The User is registered Successfully");
-            confirmationAlert.showAndWait();
-
+            AllAlerts.confirmAlert("Registration", "Registration Successful", "The User is registered Successfully");
             resetFields();
             setVisibility(RegisterAnchorPane, true, false);
             setVisibility(LoginAnchorPane, false, true);
             transition(LoginAnchorPane);
 
         } catch (EmptyFieldsException e) {
-            errorAlert.setTitle("EmptyFieldException");
-            errorAlert.setHeaderText("Empty Field Exception Caught!!");
-            errorAlert.setContentText("Fields cannot be left Empty!!!");
-            errorAlert.showAndWait();
+            e.errorAlertForEmptyField();
         } catch (UserDataAlreadyExistException e) {
-            errorAlert.setTitle("UserDataAlreadyExistException");
-            errorAlert.setHeaderText("UserDataAlreadyExistException Caught!!");
-            errorAlert.setContentText("UserData Already Exist!!! Please Try again!");
-            errorAlert.showAndWait();
-        } catch (DoesNotMatchMinimumPasswordLengthException e){
-            errorAlert.setTitle("MinimumPasswordLengthException");
-            errorAlert.setHeaderText("Minimum Password Length Exception caught!!");
-            errorAlert.setContentText("Password Length should be greater than 6. Please Try again!");
-            errorAlert.showAndWait();
-        }
-        catch(KeyMismatchException e){
-            errorAlert.setTitle("KeyMismatchException");
-            errorAlert.setHeaderText("KeyMismatchException caught!!");
-            errorAlert.setContentText("Keys do not match. Please Try again :(");
-            errorAlert.showAndWait();
-        }
-        catch (Exception e) {
-                throw new RuntimeException(e);
+            e.errorAlertForDuplicateDataFound();
+        } catch (DoesNotMatchMinimumPasswordLengthException e) {
+            e.errorAlertForShortPassword();
+        } catch (KeyMismatchException e) {
+            e.errorAlertForKeyMismatch();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
     }
@@ -103,11 +110,11 @@ public class LoginAndRegisterController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        if(registerPasswordTextField.getText().length() < 6){
+        if (registerPasswordTextField.getText().length() < 6) {
             throw new DoesNotMatchMinimumPasswordLengthException();
         }
 
-        if(!registerKeyTextField.getText().equals("KeyLOL")){
+        if (!registerKeyTextField.getText().equals("KeyLOL")) {
             throw new KeyMismatchException();
         }
 
@@ -152,5 +159,12 @@ public class LoginAndRegisterController {
         transition.setFromValue(0.0);
         transition.setToValue(1.0);
         transition.play();
+    }
+
+    public void backButtonClicked(MouseEvent mouseEvent) {
+        resetFields();
+        setVisibility(RegisterAnchorPane, true, false);
+        setVisibility(LoginAnchorPane, false, true);
+        transition(LoginAnchorPane);
     }
 }
