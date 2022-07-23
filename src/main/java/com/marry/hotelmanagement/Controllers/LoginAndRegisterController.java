@@ -28,25 +28,19 @@ public class LoginAndRegisterController {
     public AnchorPane LoginAnchorPane;
     public AnchorPane RegisterAnchorPane;
     private UserDataManager userDataManager;
-    private Alert errorAlert = new Alert(Alert.AlertType.ERROR);
     private Alert confirmationAlert = new Alert((Alert.AlertType.CONFIRMATION));
 
     public void LoginButtonClicked(ActionEvent actionEvent) {
         try {
             UserDataAuthentication();
             Main.setScene("HotelManagementMenu.fxml");
-        } catch (UserDataAuthenticationFailedException e) {
-            errorAlert.setTitle("UserDataAuthenticationFailedException");
-            errorAlert.setHeaderText("UserDataAuthentication Exception Caught!!");
-            errorAlert.setContentText("Login Username Or Password Don't match! Try Again");
-            errorAlert.showAndWait();
-
-        } catch (EmptyFieldsException e) {
-            errorAlert.setTitle("EmptyFieldException");
-            errorAlert.setHeaderText("Empty Field Exception Caught!!");
-            errorAlert.setContentText("Fields cannot be left Empty!!!");
-            errorAlert.showAndWait();
-        } catch (IOException e) {
+        }
+        catch (EmptyFieldsException e) {
+            e.errorAlertForEmptyField();
+        }
+        catch (UserDataAuthenticationFailedException e) {
+            e.errorAlertForUserDataMismatch();
+        }  catch (IOException e) {
             throw new RuntimeException(e);
         }
 
@@ -90,25 +84,13 @@ public class LoginAndRegisterController {
             transition(LoginAnchorPane);
 
         } catch (EmptyFieldsException e) {
-            errorAlert.setTitle("EmptyFieldException");
-            errorAlert.setHeaderText("Empty Field Exception Caught!!");
-            errorAlert.setContentText("Fields cannot be left Empty!!!");
-            errorAlert.showAndWait();
+            e.errorAlertForEmptyField();
         } catch (UserDataAlreadyExistException e) {
-            errorAlert.setTitle("UserDataAlreadyExistException");
-            errorAlert.setHeaderText("UserDataAlreadyExistException Caught!!");
-            errorAlert.setContentText("UserData Already Exist!!! Please Try again!");
-            errorAlert.showAndWait();
+            e.errorAlertForDuplicateDataFound();
         } catch (DoesNotMatchMinimumPasswordLengthException e) {
-            errorAlert.setTitle("MinimumPasswordLengthException");
-            errorAlert.setHeaderText("Minimum Password Length Exception caught!!");
-            errorAlert.setContentText("Password Length should be greater than 6. Please Try again!");
-            errorAlert.showAndWait();
+            e.errorAlertForShortPassword();
         } catch (KeyMismatchException e) {
-            errorAlert.setTitle("KeyMismatchException");
-            errorAlert.setHeaderText("KeyMismatchException caught!!");
-            errorAlert.setContentText("Keys do not match. Please Try again :(");
-            errorAlert.showAndWait();
+            e.errorAlertForKeyMismatch();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
