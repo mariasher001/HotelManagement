@@ -6,9 +6,8 @@ public class EmptyFieldsException extends Exception {
     private Alert errorAlert = new Alert(Alert.AlertType.ERROR);
 
     public void errorAlertForEmptyField(){
-        errorAlert.setTitle("EmptyFieldException");
-        errorAlert.setHeaderText("Empty Field Exception Caught!!");
-        errorAlert.setContentText("Fields cannot be left Empty!!!");
-        errorAlert.showAndWait();
+        AllAlerts.errorAlert("EmptyFieldException"
+                ,"Empty Field Exception Caught!!",
+                "Fields cannot be left Empty!!!");
     }
 }

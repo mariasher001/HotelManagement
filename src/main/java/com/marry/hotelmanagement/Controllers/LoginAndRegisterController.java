@@ -73,11 +73,7 @@ public class LoginAndRegisterController {
             userDataManager.setUserData(userData);
             userDataManager.close();
 
-            confirmationAlert.setTitle("Registration");
-            confirmationAlert.setHeaderText("Registration Successful");
-            confirmationAlert.setContentText("The User is registered Successfully");
-            confirmationAlert.showAndWait();
-
+            AllAlerts.confirmAlert("Registration","Registration Successful", "The User is registered Successfully");
             resetFields();
             setVisibility(RegisterAnchorPane, true, false);
             setVisibility(LoginAnchorPane, false, true);
