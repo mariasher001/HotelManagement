@@ -1,0 +1,3 @@
+2022-06-18 17:00:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERDATA" not found (this database is empty); SQL statement:
+select * from UserData [42104-212]
