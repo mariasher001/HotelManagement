@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class RoomSearchController {
     public TableView roomSearchTableView;
@@ -33,6 +35,8 @@ public class RoomSearchController {
     public MenuItem PriceMenuItem;
 
     private RoomDataManager roomDataManager;
+    private List<RoomData> roomDataList;
+    private List<RoomData> roomDataList1 = null;
 
     @FXML
     public void initialize() {
@@ -42,6 +46,7 @@ public class RoomSearchController {
         }
         linkRoomSearchTableViewColumns();
         roomSearchTableView.getItems().addAll(roomDataManager.readAllRoomData());
+
     }
 
     private void initializeRoomData() {
@@ -60,7 +65,7 @@ public class RoomSearchController {
             } else if (i <= 60) {
                 tableRow = new RoomData("" + i, "AC", "3", "30000", "AVAILABLE");
             }
-            roomSearchTableView.getItems().add(tableRow);
+            roomDataManager.setRoomData(tableRow);
         }
 
     }
@@ -77,31 +82,91 @@ public class RoomSearchController {
     }
 
     public void ACMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().filter(roomData -> roomData.getTypeOfRoom().equals("AC"))
+                .collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void NonACMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().filter(roomData -> roomData.getTypeOfRoom().equals("NON-AC"))
+                .collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void OneBedMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().filter(roomData -> roomData.getNoOfBeds().equals("1"))
+                .collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void TwoBedMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().filter(roomData -> roomData.getNoOfBeds().equals("2"))
+                .collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void ThreeBedMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().filter(roomData -> roomData.getNoOfBeds().equals("3"))
+                .collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void NoOfBedsMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().sorted((o1, o2) -> o1.getNoOfBeds().compareTo(o2.getNoOfBeds())).collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void PriceMenuItemClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomDataList = roomDataList.stream().sorted((o1, o2) -> o1.getPrice().compareTo(o2.getPrice())).collect(Collectors.toList());
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void ClearFiltersButtonClicked(ActionEvent actionEvent) {
+        roomSearchTableView.getItems().clear();
+        roomDataList = roomDataManager.readAllRoomData();
+        roomSearchTableView.getItems().addAll(roomDataList);
     }
 
     public void BookButtonClicked(ActionEvent actionEvent) {
+        for (int i = 0; i < 60; i++) {
+            if (roomSearchTableView.getSelectionModel().isSelected(i)) {
+                RoomData roomData = (RoomData) roomSearchTableView.getSelectionModel().getSelectedItem();
+                if (roomData.getRoomAvailability().equals("AVAILABLE")) {
+                    bookRoom(actionEvent, roomData);
+                } else {
+                    unbookRoom(actionEvent, roomData);
+                }
+                break;
+            }
+        }
     }
+
+    private void unbookRoom(ActionEvent actionEvent, RoomData roomData) {
+        roomData.setRoomAvailability("AVAILABLE");
+        roomDataManager.updateRoomData(roomData);
+        ClearFiltersButtonClicked(actionEvent);
+    }
+
+    private void bookRoom(ActionEvent actionEvent, RoomData roomData) {
+        roomData.setRoomAvailability("BOOKED");
+        roomDataManager.updateRoomData(roomData);
+        ClearFiltersButtonClicked(actionEvent);
+    }
+
 
     public void backButtonClicked(MouseEvent mouseEvent) throws IOException {
         Main.setScene("HotelManagementMenu.fxml");
