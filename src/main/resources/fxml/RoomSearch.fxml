@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marry.hotelmanagement.Controllers.RoomSearchController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="850.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/toppng.com-brown-background-texture-2048x1536.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="roomSearchTableView" layoutX="228.0" layoutY="122.0" prefHeight="446.0" prefWidth="595.0">
+        <columns>
+          <TableColumn fx:id="roomNo" prefWidth="75.0" text="RoomNo" />
+          <TableColumn fx:id="typeofRoom" prefWidth="96.0" text="Type Of Room" />
+            <TableColumn fx:id="noOfBeds" prefWidth="69.59994506835938" text="No of Beds" />
+            <TableColumn fx:id="price" prefWidth="70.39996337890625" text="Price" />
+            <TableColumn fx:id="RoomAvailability" prefWidth="116.79998779296875" text="RoomAvailability" />
+        </columns>
+      </TableView>
+      <MenuButton fx:id="typeOfRoomMenuButton" layoutX="40.0" layoutY="109.0" mnemonicParsing="false" text="Type Of Room">
+        <items>
+          <MenuItem fx:id="ACMenuItem" mnemonicParsing="false" onAction="#ACMenuItemClicked" text="AC" />
+          <MenuItem fx:id="NonACMenuItem" mnemonicParsing="false" onAction="#NonACMenuItemClicked" text="Non-AC" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="NumberOfBedsMenuButton" layoutX="40.0" layoutY="169.0" mnemonicParsing="false" text="Number Of Beds">
+        <items>
+          <MenuItem fx:id="OneBedMenuItem" mnemonicParsing="false" onAction="#OneBedMenuItemClicked" text="1 Bed" />
+          <MenuItem fx:id="TwoBedMenuItem" mnemonicParsing="false" onAction="#TwoBedMenuItemClicked" text="2 Beds" />
+            <MenuItem fx:id="ThreeBedMenuItem" mnemonicParsing="false" onAction="#ThreeBedMenuItemClicked" text="3 Beds" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="OrderByMenuButton" layoutX="707.0" layoutY="53.0" mnemonicParsing="false" text="ORDER BY">
+        <items>
+          <MenuItem fx:id="NoOfBedsMenuItem" mnemonicParsing="false" onAction="#NoOfBedsMenuItemClicked" text="No Of Beds" />
+          <MenuItem fx:id="PriceMenuItem" mnemonicParsing="false" onAction="#PriceMenuItemClicked" text="Price" />
+        </items>
+      </MenuButton>
+      <Button layoutX="610.0" layoutY="53.0" mnemonicParsing="false" onAction="#ClearFiltersButtonClicked" text="Clear Filters" />
+      <Button layoutX="751.0" layoutY="584.0" mnemonicParsing="false" onAction="#BookButtonClicked" text="Book" />
+       <ImageView fx:id="backButton" fitHeight="80.0" fitWidth="111.0" layoutX="-8.0" layoutY="14.0" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@../Images/back-button.png" />
+           </image>
+       </ImageView>
+   </children>
+</AnchorPane>
