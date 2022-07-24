@@ -76,13 +76,13 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
+            <PasswordField fx:id="registerPasswordTextField" layoutX="123.0" layoutY="209.0" prefHeight="26.0" prefWidth="284.0" promptText="Password" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
+            <TextField fx:id="registerKeyTextField" layoutX="123.0" layoutY="247.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter the Admin Key" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
             <Button layoutX="202.0" layoutY="303.0" mnemonicParsing="false" onAction="#RegisterButtonClicked" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #502607; -fx-border-color: #e1ed04;" text="Register" textFill="#e1ed04">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Button>
-            <PasswordField fx:id="registerPasswordTextField" layoutX="123.0" layoutY="209.0" prefHeight="26.0" prefWidth="284.0" promptText="Password" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
-            <TextField fx:id="registerKeyTextField" layoutX="123.0" layoutY="247.0" prefHeight="26.0" prefWidth="284.0" promptText="Enter the Admin Key" style="-fx-background-color: #edca98; -fx-text-fill: #48230a;" />
             <Label layoutX="33.0" layoutY="127.0" text="User-Name " textFill="#dde010">
                <font>
                   <Font size="16.0" />
