@@ -22,7 +22,7 @@
           <TableColumn fx:id="typeofRoom" prefWidth="96.0" text="Type Of Room" />
             <TableColumn fx:id="noOfBeds" prefWidth="69.59994506835938" text="No of Beds" />
             <TableColumn fx:id="price" prefWidth="70.39996337890625" text="Price" />
-            <TableColumn fx:id="RoomAvailability" prefWidth="116.79998779296875" text="RoomAvailability" />
+            <TableColumn fx:id="roomAvailability" prefWidth="116.79998779296875" text="RoomAvailability" />
         </columns>
       </TableView>
       <MenuButton fx:id="typeOfRoomMenuButton" layoutX="40.0" layoutY="109.0" mnemonicParsing="false" text="Type Of Room">
