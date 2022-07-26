@@ -7,7 +7,7 @@
     <description>Hotel Management Hibernate Entity-Manager</description>
     <!--Add persistent classes-->
     <class>com.marry.hotelmanagement.Models.UserData</class>
-
+    <class>com.marry.hotelmanagement.Models.RoomData</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <!--Hibernate Always uses LocalHost:8082-->

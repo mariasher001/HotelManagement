@@ -1,6 +1,9 @@
 package com.marry.hotelmanagement.Controllers;
 
+import com.marry.hotelmanagement.Main;
 import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
 
 public class HotelManagementMenuController {
 
@@ -10,8 +13,10 @@ public class HotelManagementMenuController {
     public void checkOutClicked(MouseEvent mouseEvent) {
     }
 
-    public void roomSearchClicked(MouseEvent mouseEvent) {
+    public void roomSearchClicked(MouseEvent mouseEvent) throws IOException {
+        Main.setScene("RoomSearch.fxml");
     }
+
 
     public void petManagementClicked(MouseEvent mouseEvent) {
     }
