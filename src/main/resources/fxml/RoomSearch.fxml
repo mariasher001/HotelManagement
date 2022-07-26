@@ -16,7 +16,7 @@
             <Image url="@../Images/toppng.com-brown-background-texture-2048x1536.jpg" />
          </image>
       </ImageView>
-      <TableView fx:id="roomSearchTableView" layoutX="228.0" layoutY="122.0" prefHeight="446.0" prefWidth="595.0">
+      <TableView fx:id="roomSearchTableView" layoutX="228.0" layoutY="122.0" onMouseClicked="#roomSearchTableViewClicked" prefHeight="446.0" prefWidth="595.0">
         <columns>
           <TableColumn fx:id="roomNo" prefWidth="75.0" text="RoomNo" />
           <TableColumn fx:id="typeofRoom" prefWidth="96.0" text="Type Of Room" />
@@ -45,7 +45,7 @@
         </items>
       </MenuButton>
       <Button layoutX="610.0" layoutY="53.0" mnemonicParsing="false" onAction="#ClearFiltersButtonClicked" text="Clear Filters" />
-      <Button layoutX="751.0" layoutY="584.0" mnemonicParsing="false" onAction="#BookButtonClicked" text="Book" />
+      <Button fx:id="bookButton" layoutX="751.0" layoutY="584.0" mnemonicParsing="false" onAction="#BookButtonClicked" text="Book" />
        <ImageView fx:id="backButton" fitHeight="80.0" fitWidth="111.0" layoutX="-8.0" layoutY="14.0" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
            <image>
                <Image url="@../Images/back-button.png" />

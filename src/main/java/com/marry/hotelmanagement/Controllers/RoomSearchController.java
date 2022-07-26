@@ -5,10 +5,7 @@ import com.marry.hotelmanagement.Models.RoomData;
 import com.marry.hotelmanagement.Models.RoomDataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
@@ -33,6 +30,7 @@ public class RoomSearchController {
     public MenuButton OrderByMenuButton;
     public MenuItem NoOfBedsMenuItem;
     public MenuItem PriceMenuItem;
+    public Button bookButton;
 
     private RoomDataManager roomDataManager;
     private List<RoomData> roomDataList;
@@ -165,10 +163,25 @@ public class RoomSearchController {
         roomData.setRoomAvailability("BOOKED");
         roomDataManager.updateRoomData(roomData);
         ClearFiltersButtonClicked(actionEvent);
+        //toDo: Send room-details to check-in.
     }
 
 
     public void backButtonClicked(MouseEvent mouseEvent) throws IOException {
         Main.setScene("HotelManagementMenu.fxml");
+    }
+
+    public void roomSearchTableViewClicked(MouseEvent mouseEvent) {
+        for (int i = 0; i < 60; i++) {
+            if (roomSearchTableView.getSelectionModel().isSelected(i)) {
+                RoomData roomData = (RoomData) roomSearchTableView.getSelectionModel().getSelectedItem();
+                if (roomData.getRoomAvailability().equals("AVAILABLE")) {
+                    bookButton.setDisable(false);
+                } else {
+                    bookButton.setDisable(true);
+                }
+                break;
+            }
+        }
     }
 }
