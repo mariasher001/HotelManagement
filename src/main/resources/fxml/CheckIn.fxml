@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marry.hotelmanagement.Controllers.CheckInController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="850.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/toppng.com-brown-background-texture-2048x1536.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="345.0" layoutY="24.0" text="Check-In" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="47.0" />
+         </font>
+      </Label>
+      <Separator layoutX="325.0" layoutY="100.0" prefWidth="200.0" />
+      <Label layoutX="228.0" layoutY="119.0" text="Name:" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="161.0" text="Type of ID" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="203.0" text="ID No#" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="250.0" text="No of additional memebers: " textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="303.0" text="Any pets:" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerNameTextField" layoutX="443.0" layoutY="127.0" promptText="Customer's name" />
+      <Label layoutX="530.0" layoutY="303.0" text="Pet Tag#" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="227.0" layoutY="356.0" text="CheckIn date:" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="411.0" text="Check-Out date:" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="496.0" text="Room no#" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="240.0" layoutY="545.0" text="Expected price:" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idNoTextField" layoutX="443.0" layoutY="211.0" />
+      <TextField fx:id="petTagTextField" disable="true" layoutX="664.0" layoutY="312.0" />
+      <TextField fx:id="expectedPriceTextField" editable="false" layoutX="446.0" layoutY="553.0" />
+      <CheckBox fx:id="petsCheckBox" layoutX="343.0" layoutY="324.0" mnemonicParsing="false" onAction="#petsCheckBoxClicked" />
+      <DatePicker fx:id="checkInDatePicker" layoutX="443.0" layoutY="364.0" />
+      <DatePicker fx:id="checkOutPicker" layoutX="443.0" layoutY="419.0" />
+      <Label layoutX="235.0" layoutY="453.0" text="Estimated stay" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="estimatedStayTextField" editable="false" layoutX="443.0" layoutY="461.0" />
+      <Button fx:id="confirmCheckInButton" layoutX="681.0" layoutY="587.0" mnemonicParsing="false" onAction="#confirmCheckInButtonClicked" style="-fx-border-color: #dab915; -fx-border-width: 2;" text="Confirm Check-In" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="17.0" />
+         </font></Button>
+      <ImageView fx:id="backButton" fitHeight="80.0" fitWidth="111.0" layoutX="-8.0" layoutY="14.0" onMouseClicked="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/back-button.png" />
+         </image>
+      </ImageView>
+      <MenuButton fx:id="typeofIdMenuButton" layoutX="446.0" layoutY="169.0" mnemonicParsing="false" text="Choose">
+        <items>
+          <MenuItem fx:id="passportMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="Passport" />
+          <MenuItem fx:id="residencePermitMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="Residence Permit" />
+            <MenuItem fx:id="nicMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="NIC" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="additionalMembersMenuButton" layoutX="446.0" layoutY="258.0" mnemonicParsing="false" text="Choose">
+        <items>
+            <MenuItem fx:id="zeroMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="0" />
+          <MenuItem fx:id="oneMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="1" />
+            <MenuItem fx:id="twoMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="2" />
+        </items>
+      </MenuButton>
+      <ChoiceBox fx:id="roomNoChoiceBox" layoutX="445.0" layoutY="504.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

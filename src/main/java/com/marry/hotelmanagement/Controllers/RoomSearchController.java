@@ -14,6 +14,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RoomSearchController {
+
+    public static String SELECTED_ROOM_NUMBER = "";
+
     public TableView roomSearchTableView;
     public TableColumn roomNo;
     public TableColumn typeofRoom;
@@ -139,7 +142,7 @@ public class RoomSearchController {
         roomSearchTableView.getItems().addAll(roomDataList);
     }
 
-    public void BookButtonClicked(ActionEvent actionEvent) {
+    public void BookButtonClicked(ActionEvent actionEvent) throws IOException {
         for (int i = 0; i < 60; i++) {
             if (roomSearchTableView.getSelectionModel().isSelected(i)) {
                 RoomData roomData = (RoomData) roomSearchTableView.getSelectionModel().getSelectedItem();
@@ -159,11 +162,10 @@ public class RoomSearchController {
         ClearFiltersButtonClicked(actionEvent);
     }
 
-    private void bookRoom(ActionEvent actionEvent, RoomData roomData) {
-        roomData.setRoomAvailability("BOOKED");
-        roomDataManager.updateRoomData(roomData);
+    private void bookRoom(ActionEvent actionEvent, RoomData roomData) throws IOException {
         ClearFiltersButtonClicked(actionEvent);
-        //toDo: Send room-details to check-in.
+        SELECTED_ROOM_NUMBER = roomData.getRoomNo();
+        Main.setScene("CheckIn.fxml");
     }
 
 
