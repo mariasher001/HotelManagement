@@ -80,16 +80,16 @@
       </Label>
       <TextField fx:id="idNoTextField" layoutX="443.0" layoutY="211.0" />
       <TextField fx:id="petTagTextField" disable="true" layoutX="664.0" layoutY="312.0" />
-      <TextField fx:id="expectedPriceTextField" editable="false" layoutX="446.0" layoutY="553.0" />
+      <TextField fx:id="expectedPriceTextField" editable="false" layoutX="446.0" layoutY="553.0" prefHeight="26.0" prefWidth="151.0" />
       <CheckBox fx:id="petsCheckBox" layoutX="343.0" layoutY="324.0" mnemonicParsing="false" onAction="#petsCheckBoxClicked" />
-      <DatePicker fx:id="checkInDatePicker" layoutX="443.0" layoutY="364.0" />
-      <DatePicker fx:id="checkOutPicker" layoutX="443.0" layoutY="419.0" />
+      <DatePicker fx:id="checkInDatePicker" layoutX="443.0" layoutY="364.0" prefHeight="26.0" prefWidth="151.0" />
+      <DatePicker fx:id="checkOutDatePicker" layoutX="443.0" layoutY="419.0" prefHeight="26.0" prefWidth="151.0" />
       <Label layoutX="235.0" layoutY="453.0" text="Estimated stay" textFill="#dab915">
          <font>
             <Font name="Blackadder ITC" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="estimatedStayTextField" editable="false" layoutX="443.0" layoutY="461.0" />
+      <TextField fx:id="estimatedStayTextField" layoutX="443.0" layoutY="461.0" prefHeight="26.0" prefWidth="151.0" />
       <Button fx:id="confirmCheckInButton" layoutX="681.0" layoutY="587.0" mnemonicParsing="false" onAction="#confirmCheckInButtonClicked" style="-fx-border-color: #dab915; -fx-border-width: 2;" text="Confirm Check-In" textFill="#dab915">
          <font>
             <Font name="Blackadder ITC" size="17.0" />
@@ -99,20 +99,30 @@
             <Image url="@../Images/back-button.png" />
          </image>
       </ImageView>
-      <MenuButton fx:id="typeofIdMenuButton" layoutX="446.0" layoutY="169.0" mnemonicParsing="false" text="Choose">
+      <MenuButton fx:id="typeofIdMenuButton" layoutX="446.0" layoutY="169.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Choose">
         <items>
           <MenuItem fx:id="passportMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="Passport" />
           <MenuItem fx:id="residencePermitMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="Residence Permit" />
             <MenuItem fx:id="nicMenuItem" mnemonicParsing="false" onAction="#typeOfIdMenuItemClicked" text="NIC" />
         </items>
       </MenuButton>
-      <MenuButton fx:id="additionalMembersMenuButton" layoutX="446.0" layoutY="258.0" mnemonicParsing="false" text="Choose">
+      <MenuButton fx:id="additionalMembersMenuButton" layoutX="446.0" layoutY="258.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="149.0" text="Choose">
         <items>
             <MenuItem fx:id="zeroMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="0" />
           <MenuItem fx:id="oneMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="1" />
             <MenuItem fx:id="twoMenuItem" mnemonicParsing="false" onAction="#additionalMembersMenuItemsClicked" text="2" />
         </items>
       </MenuButton>
-      <ChoiceBox fx:id="roomNoChoiceBox" layoutX="445.0" layoutY="504.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="roomNoChoiceBox" layoutX="445.0" layoutY="504.0" prefHeight="26.0" prefWidth="150.0" />
+      <CheckBox fx:id="estimatedStayCheckBox" layoutX="640.0" layoutY="462.0" mnemonicParsing="false" onAction="#estimatedStayCheckBoxClicked" text="Calculate Estimated Stay" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkOutDateCheckBox" layoutX="640.0" layoutY="420.0" mnemonicParsing="false" onAction="#checkOutDateCheckBoxClicked" text="Calculate CheckOutDate" textFill="#dab915">
+         <font>
+            <Font name="Blackadder ITC" size="14.0" />
+         </font>
+      </CheckBox>
    </children>
 </AnchorPane>
