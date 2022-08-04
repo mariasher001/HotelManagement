@@ -240,5 +240,13 @@ public class CheckInController {
         customerDataManager.close();
     }
 
+    public void expectedPriceClicked(MouseEvent mouseEvent) {
+        String roomNo = roomNoChoiceBox.getSelectionModel().getSelectedItem().toString();
+        RoomData roomData = roomDataManager.readAllRoomData().stream().filter(roomData1 -> roomData1.getRoomNo().equals(roomNo)).toList().get(0);
+        if (petsCheckBox.isSelected())
+            expectedPriceTextField.setText("" + (Integer.parseInt(roomData.getPrice()) + 2000));
+        else
+            expectedPriceTextField.setText(roomData.getPrice());
 
+    }
 }

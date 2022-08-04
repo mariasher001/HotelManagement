@@ -80,7 +80,7 @@
       </Label>
       <TextField fx:id="idNoTextField" layoutX="443.0" layoutY="211.0" />
       <TextField fx:id="petTagTextField" disable="true" layoutX="664.0" layoutY="312.0" />
-      <TextField fx:id="expectedPriceTextField" editable="false" layoutX="446.0" layoutY="553.0" prefHeight="26.0" prefWidth="151.0" />
+      <TextField fx:id="expectedPriceTextField" editable="false" layoutX="446.0" layoutY="553.0" onMouseClicked="#expectedPriceClicked" prefHeight="26.0" prefWidth="151.0" />
       <CheckBox fx:id="petsCheckBox" layoutX="343.0" layoutY="324.0" mnemonicParsing="false" onAction="#petsCheckBoxClicked" />
       <DatePicker fx:id="checkInDatePicker" layoutX="443.0" layoutY="364.0" prefHeight="26.0" prefWidth="151.0" />
       <DatePicker fx:id="checkOutDatePicker" layoutX="443.0" layoutY="419.0" prefHeight="26.0" prefWidth="151.0" />
