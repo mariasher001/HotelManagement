@@ -6,6 +6,8 @@
   <persistence-unit name="HotelManagement">
     <description>Hotel Management Hibernate Entity-Manager</description>
     <!--Add persistent classes-->
+    <class>com.marry.hotelmanagement.Models.CustomerData</class>
+    <class>com.marry.hotelmanagement.Models.CheckInData</class>
     <class>com.marry.hotelmanagement.Models.UserData</class>
     <class>com.marry.hotelmanagement.Models.RoomData</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>

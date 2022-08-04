@@ -2,8 +2,7 @@ package com.marry.hotelmanagement.Controllers;
 
 import com.marry.hotelmanagement.Exceptions.AllAlerts;
 import com.marry.hotelmanagement.Main;
-import com.marry.hotelmanagement.Models.RoomData;
-import com.marry.hotelmanagement.Models.RoomDataManager;
+import com.marry.hotelmanagement.Models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -60,6 +59,8 @@ public class CheckInController {
     private MenuItem zeroMenuItem;
 
     private RoomDataManager roomDataManager;
+    private CheckInDataManager checkInDataManager;
+    private CustomerDataManager customerDataManager;
 
     @FXML
     private void initialize() {
@@ -124,34 +125,6 @@ public class CheckInController {
         }
     }
 
-    @FXML
-    private void confirmCheckInButtonClicked(ActionEvent actionEvent) throws IOException {
-
-        AllAlerts.confirmAlert("Check-In", "Checked-In!", "Check in was successful");
-        Main.setScene("HotelManagementMenu.fxml");
-    }
-
-    public void checkOutDateCheckBoxClicked(ActionEvent actionEvent) {
-        if (checkOutDateCheckBox.isSelected()) {
-            if (checkInDatePicker.getValue() != null && !estimatedStayTextField.getText().isEmpty()) {
-                if (Integer.parseInt(estimatedStayTextField.getText()) < 0) {
-                    AllAlerts.errorAlert("Negative Numbers", "Negative Numbers in estimated stay", "Please Use Positive integers only!");
-                    checkOutDateCheckBox.setSelected(false);
-                    return;
-                }
-                int NumberOfDays = Integer.parseInt(estimatedStayTextField.getText());
-                checkOutDatePicker.setValue(checkInDatePicker.getValue().plusDays(NumberOfDays));
-                checkOutDatePicker.setEditable(false);
-            } else {
-                AllAlerts.errorAlert("EmptyFields", "Empty Fields Detected", "CheckIn and CheckOutDates fields cannot be left empty!!");
-                checkOutDateCheckBox.setSelected(false);
-            }
-
-        } else {
-            checkOutDatePicker.setEditable(true);
-        }
-    }
-
     public void estimatedStayCheckBoxClicked(ActionEvent actionEvent) {
         if (estimatedStayCheckBox.isSelected()) {
             if (checkInDatePicker.getValue() != null && checkOutDatePicker.getValue() != null) {
@@ -171,4 +144,101 @@ public class CheckInController {
             estimatedStayTextField.setEditable(true);
         }
     }
+
+
+    public void checkOutDateCheckBoxClicked(ActionEvent actionEvent) throws Exception {
+        if (checkOutDateCheckBox.isSelected()) {
+            if (checkInDatePicker.getValue() != null && !estimatedStayTextField.getText().isEmpty()) {
+                if (Integer.parseInt(estimatedStayTextField.getText()) < 0) {
+                    AllAlerts.errorAlert("Negative Numbers", "Negative Numbers in estimated stay", "Please Use Positive integers only!");
+                    checkOutDateCheckBox.setSelected(false);
+                    return;
+                }
+                int NumberOfDays = Integer.parseInt(estimatedStayTextField.getText());
+                checkOutDatePicker.setValue(checkInDatePicker.getValue().plusDays(NumberOfDays));
+                checkOutDatePicker.setEditable(false);
+            } else {
+                checkOutDateCheckBox.setSelected(false);
+            }
+
+        } else {
+            checkOutDatePicker.setEditable(true);
+        }
+    }
+
+
+    @FXML
+    private void confirmCheckInButtonClicked(ActionEvent actionEvent) throws Exception {
+        if (customerNameTextField.getText().isEmpty() || typeofIdMenuButton.getText().equals("Choose")
+                || idNoTextField.getText().isEmpty() || additionalMembersMenuButton.getText().equals("Choose")
+                || checkInDatePicker.getValue() == null || checkOutDatePicker.getValue() == null
+                || roomNoChoiceBox.getValue() == null) {
+            AllAlerts.errorAlert("EmptyFields", "EmptyFields Found", "Please Check Out Again for Empty Fields and Resubmit the form!!");
+            return;
+        }
+        updateRoomAvailabilityStatus();
+        persistInCustomerDataTable();
+        persistInCheckInDataTable();
+
+        AllAlerts.confirmAlert("Check-In", "Checked-In!", "Check in was successful");
+        Main.setScene("HotelManagementMenu.fxml");
+    }
+
+    private void updateRoomAvailabilityStatus() {
+        RoomData roomData = roomDataManager.readAllRoomData().stream()
+                .filter(roomData1 -> roomData1.getRoomNo().equals(roomNoChoiceBox.getValue().toString())).toList()
+                .get(0);
+        roomData.setRoomAvailability("BOOKED");
+        roomDataManager.updateRoomData(roomData);
+    }
+
+    private void persistInCheckInDataTable() {
+        checkInDataManager = new CheckInDataManager();
+        CheckInData checkInData = new CheckInData();
+
+        checkInData.setName(customerNameTextField.getText());
+        checkInData.setTypeOfID(typeofIdMenuButton.getText());
+        checkInData.setIdNo(idNoTextField.getText());
+        checkInData.setNoOfAdditionalMembers(additionalMembersMenuButton.getText());
+        checkInData.setPets("" + petsCheckBox.isSelected());
+        if (petsCheckBox.isSelected())
+            checkInData.setPetTag(petTagTextField.getText());
+        else
+            checkInData.setPetTag("NONE");
+
+        checkInData.setCheckInDate(checkInDatePicker.getValue().toString());
+        checkInData.setExpectedCheckOut(checkOutDatePicker.getValue().toString());
+        checkInData.setEstimatedStay(estimatedStayTextField.getText());
+        checkInData.setRoomNo(roomNoChoiceBox.getValue().toString());
+
+        checkInDataManager.setCheckInData(checkInData);
+        checkInDataManager.close();
+    }
+
+    private void persistInCustomerDataTable() throws Exception {
+        customerDataManager = new CustomerDataManager();
+        CustomerData customerData = new CustomerData();
+
+        customerData.setName(customerNameTextField.getText());
+        customerData.setTypeOfID(typeofIdMenuButton.getText());
+        customerData.setIdNo(idNoTextField.getText());
+        customerData.setNoOfAdditionalMembers(additionalMembersMenuButton.getText());
+        customerData.setPets("" + petsCheckBox.isSelected());
+        if (petsCheckBox.isSelected()) {
+            customerData.setPetTag(petTagTextField.getText());
+        } else {
+            customerData.setPetTag("NONE");
+        }
+        customerData.setCheckInDate(checkInDatePicker.getValue().toString());
+        customerData.setCheckOutDate(checkOutDatePicker.getValue().toString());
+        customerData.setEstimatedStay(estimatedStayTextField.getText());
+        customerData.setRoomNo(roomNoChoiceBox.getValue().toString());
+        customerData.setStatus("CHECKED-IN");
+        customerData.setBillId("NONE");
+
+        customerDataManager.setCustomerData(customerData);
+        customerDataManager.close();
+    }
+
+
 }
