@@ -28,8 +28,6 @@ public class CustomerData {
     @Basic(optional = false)
     private String checkOutDate;
     @Basic(optional = false)
-    private String estimatedStay;
-    @Basic(optional = false)
     private String roomNo;
     @Basic(optional = false)
     private String status;
@@ -106,14 +104,6 @@ public class CustomerData {
 
     public void setCheckOutDate(String checkOutDate) {
         this.checkOutDate = checkOutDate;
-    }
-
-    public String getEstimatedStay() {
-        return estimatedStay;
-    }
-
-    public void setEstimatedStay(String estimatedStay) {
-        this.estimatedStay = estimatedStay;
     }
 
     public String getRoomNo() {

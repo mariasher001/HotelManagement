@@ -230,8 +230,7 @@ public class CheckInController {
             customerData.setPetTag("NONE");
         }
         customerData.setCheckInDate(checkInDatePicker.getValue().toString());
-        customerData.setCheckOutDate(checkOutDatePicker.getValue().toString());
-        customerData.setEstimatedStay(estimatedStayTextField.getText());
+        customerData.setCheckOutDate("NONE");
         customerData.setRoomNo(roomNoChoiceBox.getValue().toString());
         customerData.setStatus("CHECKED-IN");
         customerData.setBillId("NONE");

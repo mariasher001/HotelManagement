@@ -10,6 +10,7 @@
     <class>com.marry.hotelmanagement.Models.CheckInData</class>
     <class>com.marry.hotelmanagement.Models.UserData</class>
     <class>com.marry.hotelmanagement.Models.RoomData</class>
+    <class>com.marry.hotelmanagement.Models.BillData</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <!--Hibernate Always uses LocalHost:8082-->
